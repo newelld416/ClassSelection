@@ -1,8 +1,8 @@
 // src/app/routes.ts
-import {Home} from './components/home';     // ./components/home/index.ts
+import {Home} from './pages/home';
+import {About} from './pages/about';
 
 export default [
     {path: '/', component: Home, name: 'Home'},
-    // Async load a component using Webpack's require with es6-promise-loader
-    {path: '/about', loader: () => require('./components/about')('About'), name: 'About'}
+    {path: '/about', component: About, name: 'About'}
 ];
